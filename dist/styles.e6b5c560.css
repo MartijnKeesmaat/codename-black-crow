@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,500|Source+Sans+Pro:400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  color: #fff;
+  background: #E7CC84;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: #f6f6f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #E7CC84;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr,
+.hr {
+  display: block;
+  height: 0.1rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(182, 182, 182, 0.4);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+figure {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.grid-vertical {
+  position: fixed;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 230px);
+  height: 100vh;
+  margin: 0 auto;
+}
+.grid-vertical .line-left {
+  width: 1px;
+  height: 100%;
+  opacity: 0.2;
+  background: #979797;
+}
+.grid-vertical .line-right {
+  width: 1px;
+  height: 100%;
+  opacity: 0.2;
+  background: #979797;
+}
+
+body {
+  color: #000;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  display: inline-block;
+  margin: 0 0 0.3em 0;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  line-height: 1.18;
+}
+
+h1,
+.h1 {
+  font-size: 6.4rem;
+}
+
+h2,
+.h2 {
+  font-size: 4.8rem;
+}
+
+h3,
+.h3 {
+  font-size: 3.6rem;
+}
+
+h4,
+.h4 {
+  font-size: 2.7rem;
+}
+
+h5,
+.h5 {
+  font-size: 2.2rem;
+}
+
+h6,
+.h6 {
+  font-size: 2rem;
+}
+
+p,
+.p {
+  max-width: 750px;
+  margin: 0 0 1em 0;
+}
+p:last-child,
+.p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  transition: 0.28s all ease;
+  text-decoration: none;
+  color: initial;
+}
+
+header {
+  position: relative;
+  height: 1246px;
+}
+
+.header-logo {
+  height: 50px;
+  margin-top: 35px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.header-img {
+  position: absolute;
+  z-index: -1;
+  top: -6px;
+  right: 0;
+  left: 6%;
+  height: 1246px;
+  margin: 0 auto;
+}
+
+.header__nav-bar {
+  position: relative;
+  z-index: -2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 40px;
+  margin-right: 30px;
+  margin-left: calc(20% - 30px);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.header__nav-bar .header__meta {
+  display: flex;
+}
+.header__nav-bar .header__meta .header__meta__group {
+  margin-right: 40px;
+}
+.header__nav-bar .header__meta .header__meta__group h5 {
+  display: block;
+  opacity: 0.5;
+  font-size: 11px;
+}
+.header__nav-bar .header__meta .header__meta__group h4 {
+  font-size: 18px;
+}
+
+.header__nav img {
+  height: 60px;
+}
+
+.header__count {
+  position: absolute;
+  top: 342px;
+  right: 83px;
+  text-align: right;
+}
+.header__count h4 {
+  display: block;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+.header__count h5 {
+  margin-top: -10px;
+  opacity: 0.05;
+  font-size: 75px;
+  font-weight: 500;
+}
+
+.header__title-section {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 148px;
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-90deg) translateY(-50%);
+}
+.header__title-section h3 {
+  font-size: 20px;
+}
+.header__title-section h1 {
+  margin: 0;
+  font-size: 80px;
+}
+.header__title-section p {
+  max-width: 265px;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.header__desc {
+  position: absolute;
+  top: 729px;
+  right: 0;
+  padding-right: 129px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.header__desc h3 {
+  font-size: 15px;
+  font-weight: 500;
+}
+.header__desc p {
+  max-width: 261px;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=/styles.e6b5c560.css.map */

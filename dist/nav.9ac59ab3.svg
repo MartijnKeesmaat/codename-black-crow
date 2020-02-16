@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tabless-Copy-8" transform="translate(-1349.000000, -142.000000)">
+            <g id="Group-12" transform="translate(1350.000000, 143.000000)">
+                <rect id="Rectangle" stroke="#000000" opacity="0.100000001" x="0" y="0" width="60" height="60"></rect>
+                <rect id="Rectangle" fill="#000000" x="58" y="58" width="2" height="2"></rect>
+                <rect id="Rectangle-Copy" fill="#000000" x="0" y="0" width="2" height="2"></rect>
+                <g id="Group-8" transform="translate(17.000000, 23.000000)" stroke="#000000" stroke-linecap="square" stroke-width="2">
+                    <line x1="0.583333333" y1="0.576923077" x2="27.4166667" y2="0.576923077" id="Line-10"></line>
+                    <line x1="8.75" y1="7.5" x2="27.4166667" y2="7.5" id="Line-10-Copy"></line>
+                    <line x1="15.75" y1="14.4230769" x2="27.4166667" y2="14.4230769" id="Line-10-Copy-2"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
