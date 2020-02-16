@@ -5663,6 +5663,27 @@ exports.default = exports.gsap = gsapWithCSS;
 var _gsap = _interopRequireDefault(require("gsap"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//simple tween like the old TweenMax.to(...)
+// gsap.to('h1', { duration: 2, x: 100 });
+//create a timeline and add a tween
+// var tl = gsap.timeline();
+// tl.to('h1', { duration: 2, x: 100 });
+// tl.to('h1', { duration: 2, y: 100 });
+window.addEventListener('scroll', doSomething);
+var slider = document.querySelector('.slider');
+var sliderInner = document.querySelector('.slider__inner');
+var p = document.querySelector('.slide-section__meta p');
+var numbers = document.querySelector('.header__meta__group h4');
+var numbers2 = document.querySelector('.header__title-section h3');
+
+function doSomething(e) {
+  var distanceToTop = slider.getBoundingClientRect().top;
+  p.innerHTML = "X1.".concat(distanceToTop);
+  numbers.innerHTML = distanceToTop;
+  numbers2.innerHTML = "A3-".concat(distanceToTop);
+  sliderInner.style.transform = "translateX(".concat(distanceToTop / 3, "px)");
+}
 },{"gsap":"../node_modules/gsap/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -5691,7 +5712,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51576" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51960" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
