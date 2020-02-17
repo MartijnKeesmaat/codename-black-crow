@@ -1,0 +1,157 @@
+.slideshow
+  position: relative
+
+  padding-left: 150px
+
+.slideshow-desc
+  padding-top: 83px
+  padding-left: 30px
+
+  h3
+    max-width: 288px
+
+    font-size: 35px
+
+  p
+    max-width: 288px
+
+    font-size: 14px
+
+.slideshow-small-image
+  position: relative
+
+  display: flex
+  overflow: hidden
+
+  width: 540px
+  height: 364px
+  margin-top: 102px
+
+  img
+    position: absolute
+
+    width: 100%
+    height: 100%
+
+    &:nth-child(2)
+      z-index: 3
+
+    &:nth-child(3)
+      z-index: 2
+
+    &:nth-child(4)
+      z-index: 1
+
+.white
+  position: absolute
+  z-index: 10
+  bottom: 0
+
+  width: 540px
+  height: 364px
+
+  transform: translateX(100%)
+
+  background: #fff
+
+.white2
+  position: absolute
+  z-index: 10
+  bottom: 0
+
+  width: 653px
+  height: 936px
+
+  transform: translateX(100%)
+
+  background: #fff
+
+.slideshow-large-image
+  position: absolute
+  z-index: -1
+  top: 0
+  right: 206px
+
+  display: flex
+  overflow: hidden
+
+  width: 653px
+  height: 936px
+
+  img
+    position: absolute
+
+    width: 100%
+    height: 100%
+
+    &:nth-child(2)
+      z-index: 3
+
+    &:nth-child(3)
+      z-index: 2
+
+    &:nth-child(4)
+      z-index: 1
+
+.pagination
+  position: absolute
+  right: 0
+  bottom: 0
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+  width: 206px
+  height: 364px
+
+  background: #2E404B
+
+  .pagination__controls
+    display: flex
+    flex-direction: column
+
+    .pagination__control
+      width: 10px
+      height: 10px
+      margin-bottom: 20px
+
+      cursor: pointer
+      transition: .3s all ease
+
+      opacity: .4
+      border-radius: 50%
+      background: #fff
+
+      &:hover
+        opacity: 1
+
+      &:last-child
+        margin-bottom: 0
+
+    .pagination__control--active
+      position: relative
+
+      transition: .3s all ease
+
+      opacity: 1
+
+      &:after
+        position: absolute
+        top: 50%
+        right: 0
+        left: -7.7px
+
+        width: 25px
+        height: 25px
+        margin: 0 auto
+
+        content: ''
+        transition: .3s all ease
+        transform: translateY(-50%)
+
+        opacity: .2
+        border-radius: 50%
+        background: #fff
+
+        filter: blur(2px)

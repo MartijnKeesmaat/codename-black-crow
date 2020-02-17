@@ -5676,13 +5676,143 @@ var sliderInner = document.querySelector('.slider__inner');
 var p = document.querySelector('.slide-section__meta p');
 var numbers = document.querySelector('.header__meta__group h4');
 var numbers2 = document.querySelector('.header__title-section h3');
+var cheeky = document.querySelector('.cheeky');
+var cheekyBeeky = document.querySelector('.cheekyBeeky');
+var sign = document.querySelector('.sign');
+var header = document.querySelector('header');
+var headerTitle = document.querySelector('.header__title-section__inner');
+var headerDesc = document.querySelector('.header__desc');
+var slideshow = document.querySelector('.slideshow');
 
 function doSomething(e) {
+  var distanceToHeader = header.getBoundingClientRect().top;
+  headerTitle.style.transform = "translateX(".concat(distanceToHeader / 6, "px)");
+  headerDesc.style.transform = "translateY(".concat(distanceToHeader / 12, "px)");
   var distanceToTop = slider.getBoundingClientRect().top;
-  p.innerHTML = "X1.".concat(distanceToTop);
+  p.innerHTML = "X4.".concat(distanceToTop);
   numbers.innerHTML = distanceToTop;
   numbers2.innerHTML = "A3-".concat(distanceToTop);
   sliderInner.style.transform = "translateX(".concat(distanceToTop / 3, "px)");
+  var distanceToCheeky = cheeky.getBoundingClientRect().top;
+  cheekyBeeky.style.transform = "translateY(-".concat(distanceToCheeky / 2, "px) scale(1.1)");
+  sign.style.transform = "rotate(".concat(distanceToCheeky / 6, "deg)");
+  var distanceToSlideshow = slideshow.getBoundingClientRect().top;
+  if (distanceToSlideshow < 100 && distanceToSlideshow > 98) showNext();
+}
+
+var control = document.querySelector('.pagination__control');
+var slideImgsSmall = document.querySelectorAll('.slideshow-small-image img');
+var slideImgsLarge = document.querySelectorAll('.slideshow-large-image img');
+control.addEventListener('click', showNext);
+
+function showNext() {
+  _gsap.default.to('.white', {
+    duration: 1.2,
+    x: '-100%',
+    ease: 'CustomEase.create("custom", "M0,0,C0.104,0.204,0.942,0.092,1,1"'
+  });
+
+  _gsap.default.to(slideImgsSmall[0], {
+    duration: 0,
+    autoAlpha: 0,
+    delay: 0.4
+  });
+
+  _gsap.default.to(slideImgsSmall[1], {
+    duration: 0,
+    autoAlpha: 1,
+    delay: 0.4
+  });
+
+  _gsap.default.to('.pagination', {
+    background: '#B87757',
+    delay: 0.25,
+    duration: 1.2
+  });
+
+  var controls = document.querySelectorAll('.pagination__control');
+  setTimeout(function () {
+    controls[0].classList.remove('pagination__control--active');
+    controls[1].classList.add('pagination__control--active');
+  }, 250);
+
+  _gsap.default.to('.white2', {
+    duration: 1.2,
+    x: '-100%',
+    delay: 0.25,
+    ease: 'CustomEase.create("custom", "M0,0,C0.104,0.204,0.942,0.092,1,1"'
+  });
+
+  _gsap.default.to(slideImgsLarge[0], {
+    duration: 0,
+    autoAlpha: 0,
+    delay: 0.65
+  });
+
+  _gsap.default.to(slideImgsLarge[1], {
+    duration: 0,
+    autoAlpha: 1,
+    delay: 0.65
+  });
+
+  _gsap.default.set('.white', {
+    x: '100%',
+    delay: 1.2
+  });
+
+  _gsap.default.to('.white', {
+    delay: 2.3,
+    duration: 1.2,
+    x: '-100%',
+    ease: 'CustomEase.create("custom", "M0,0,C0.104,0.204,0.942,0.092,1,1"'
+  });
+
+  _gsap.default.to(slideImgsSmall[1], {
+    duration: 0,
+    autoAlpha: 0,
+    delay: 2.7
+  });
+
+  _gsap.default.to(slideImgsSmall[2], {
+    duration: 0,
+    autoAlpha: 1,
+    delay: 2.7
+  });
+
+  _gsap.default.set('.white2', {
+    x: '100%',
+    delay: 1.45
+  });
+
+  _gsap.default.to('.white2', {
+    duration: 1.2,
+    x: '-100%',
+    delay: 2.55,
+    ease: 'CustomEase.create("custom", "M0,0,C0.104,0.204,0.942,0.092,1,1"'
+  });
+
+  _gsap.default.to(slideImgsLarge[1], {
+    duration: 0,
+    autoAlpha: 0,
+    delay: 2.95
+  });
+
+  _gsap.default.to(slideImgsLarge[2], {
+    duration: 0,
+    autoAlpha: 1,
+    delay: 2.95
+  });
+
+  _gsap.default.to('.pagination', {
+    background: '#635E52',
+    delay: 2.95,
+    duration: 1.2
+  });
+
+  setTimeout(function () {
+    controls[1].classList.remove('pagination__control--active');
+    controls[2].classList.add('pagination__control--active');
+  }, 2950);
 }
 },{"gsap":"../node_modules/gsap/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -5712,7 +5842,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51960" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59829" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
