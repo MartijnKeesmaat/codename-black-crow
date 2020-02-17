@@ -1,12 +1,25 @@
 import gsap from 'gsap';
 
-//simple tween like the old TweenMax.to(...)
-// gsap.to('h1', { duration: 2, x: 100 });
+gsap.to('.overlay--light', {
+  y: '-100%',
+  duration: 1,
+  delay: 0.5,
+  ease: 'CustomEase.create("custom", "M0,0,C0.104,0.204,0.942,0.092,1,1"'
+});
 
-//create a timeline and add a tween
-// var tl = gsap.timeline();
-// tl.to('h1', { duration: 2, x: 100 });
-// tl.to('h1', { duration: 2, y: 100 });
+gsap.to('.overlay', {
+  y: '-100%',
+  duration: 1.5,
+  delay: 0.5,
+  ease: 'CustomEase.create("custom", "M0,0,C0.104,0.204,0.942,0.092,1,1"'
+});
+
+gsap.from('header', {
+  scale: 0.9,
+  // autoAlpha: 0,
+  duration: 0.5,
+  delay: 1.5
+});
 
 window.addEventListener('scroll', doSomething);
 
@@ -32,9 +45,9 @@ function doSomething(e) {
   headerDesc.style.transform = `translateY(${distanceToHeader / 12}px)`;
 
   const distanceToTop = slider.getBoundingClientRect().top;
-  p.innerHTML = `X4.${distanceToTop}`;
-  numbers.innerHTML = distanceToTop;
-  numbers2.innerHTML = `A3-${distanceToTop}`;
+  p.innerHTML = `X4.${distanceToTop.toString().substring(0, 6)}`;
+  numbers.innerHTML = distanceToTop.toString().substring(0, 6);
+  numbers2.innerHTML = `A3-${distanceToTop.toString().substring(0, 6)}`;
   sliderInner.style.transform = `translateX(${distanceToTop / 3}px)`;
 
   const distanceToCheeky = cheeky.getBoundingClientRect().top;

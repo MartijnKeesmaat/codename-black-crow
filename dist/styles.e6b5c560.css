@@ -83,6 +83,28 @@ body {
   margin: 150px 0;
 }
 
+.overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vh;
+  transform: translateY(100%);
+  background: #000;
+}
+
+.overlay--light {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(100%);
+  background: rgba(0, 0, 0, 0.3);
+}
+
 body {
   color: #000;
   font-family: "Source Sans Pro", sans-serif;

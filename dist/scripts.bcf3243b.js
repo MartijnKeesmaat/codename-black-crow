@@ -5664,12 +5664,27 @@ var _gsap = _interopRequireDefault(require("gsap"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//simple tween like the old TweenMax.to(...)
-// gsap.to('h1', { duration: 2, x: 100 });
-//create a timeline and add a tween
-// var tl = gsap.timeline();
-// tl.to('h1', { duration: 2, x: 100 });
-// tl.to('h1', { duration: 2, y: 100 });
+_gsap.default.to('.overlay--light', {
+  y: '-100%',
+  duration: 1,
+  delay: 0.5,
+  ease: 'CustomEase.create("custom", "M0,0,C0.104,0.204,0.942,0.092,1,1"'
+});
+
+_gsap.default.to('.overlay', {
+  y: '-100%',
+  duration: 1.5,
+  delay: 0.5,
+  ease: 'CustomEase.create("custom", "M0,0,C0.104,0.204,0.942,0.092,1,1"'
+});
+
+_gsap.default.from('header', {
+  scale: 0.9,
+  // autoAlpha: 0,
+  duration: 0.5,
+  delay: 1.5
+});
+
 window.addEventListener('scroll', doSomething);
 var slider = document.querySelector('.slider');
 var sliderInner = document.querySelector('.slider__inner');
@@ -5689,9 +5704,9 @@ function doSomething(e) {
   headerTitle.style.transform = "translateX(".concat(distanceToHeader / 6, "px)");
   headerDesc.style.transform = "translateY(".concat(distanceToHeader / 12, "px)");
   var distanceToTop = slider.getBoundingClientRect().top;
-  p.innerHTML = "X4.".concat(distanceToTop);
-  numbers.innerHTML = distanceToTop;
-  numbers2.innerHTML = "A3-".concat(distanceToTop);
+  p.innerHTML = "X4.".concat(distanceToTop.toString().substring(0, 6));
+  numbers.innerHTML = distanceToTop.toString().substring(0, 6);
+  numbers2.innerHTML = "A3-".concat(distanceToTop.toString().substring(0, 6));
   sliderInner.style.transform = "translateX(".concat(distanceToTop / 3, "px)");
   var distanceToCheeky = cheeky.getBoundingClientRect().top;
   cheekyBeeky.style.transform = "translateY(-".concat(distanceToCheeky / 2, "px) scale(1.1)");
@@ -5842,7 +5857,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59829" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53576" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
