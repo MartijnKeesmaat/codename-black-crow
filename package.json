@@ -12,7 +12,7 @@
     "build-prod": "parcel build src/index.html"
   },
   "dependencies": {
-    "gsap": "^3.1.1"
+    "gsap": "^3.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
